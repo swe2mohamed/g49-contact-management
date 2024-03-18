@@ -28,8 +28,7 @@ public class ContactDate {
         String[] newContactArray = newContact.split(","); //
         String mobileNumber = newContactArray[1];
         for (String contact : contacts) {
-            String indexMobilNumber = contact.split(",")[1];
-            if(indexMobilNumber.equals(mobileNumber)){
+            if(contact != null && contact.split(",")[1].equals(mobileNumber)){
                 return true;
             }
         }
